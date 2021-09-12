@@ -2,52 +2,52 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-    // const [enteredTitle, setEnteredTitle] = useState('');
-    // const [enteredAmount, setEnteredAmount] = useState('');
-    // const [enteredDate, setEnteredDate] = useState('');
+    const [enteredTitle, setEnteredTitle] = useState('');
+    const [enteredAmount, setEnteredAmount] = useState('');
+    const [enteredDate, setEnteredDate] = useState('');
 
-    const [userInput, setUserInput] = useState({
-        enteredTitle: '',
-        enteredAmount: '',
-        enteredDate: ''
-    });
+    // const [userInput, setUserInput] = useState({
+    //     enteredTitle: '',
+    //     enteredAmount: '',
+    //     enteredDate: ''
+    // });
 
     const titleClickHandler = (event) => {
         // setUserInput({
         //     ...userInput,
         //     enteredTitle: event.target.value
         // });
-        // setEnteredTitle(event.target.value)
-        // console.log(event.target.value)
+        setEnteredTitle(event.target.value)
+        console.log(event.target.value)
 
-        setUserInput((prevState) => {
-            return {...prevState, enteredTitle: event.target.value}
-        });
+        // setUserInput((prevState) => {
+        //     return {...prevState, enteredTitle: event.target.value}
+        // });
     };
 
     const amountClickHandler = (event) => {
-        // setEnteredAmount(event.target.value)
-        // console.log(event.target.value)
+        setEnteredAmount(event.target.value)
+        console.log(event.target.value)
         // setUserInput({
         //     ...userInput,
         //     enteredAmount: event.target.value
         // });
-        setUserInput((prevState) => {
-            return {...prevState, enteredAmount: event.target.value}
-        });
+        // setUserInput((prevState) => {
+        //     return {...prevState, enteredAmount: event.target.value}
+        // });
     };
 
     const dateClickHander = (event) => {
-        // setEnteredDate(event.target.value)
-        // console.log(event.target.value)
+        setEnteredDate(event.target.value)
+        console.log(event.target.value)
         // setUserInput({
         //     ...userInput,
         //     enteredDate: event.target.value
         // });
 
-        setUserInput((prevState) => {
-            return {...prevState, enteredDate: event.target.value}
-        });
+        // setUserInput((prevState) => {
+        //     return {...prevState, enteredDate: event.target.value}
+        // });
 
     };
 
