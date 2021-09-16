@@ -1,7 +1,8 @@
+import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses"; 
 import NewExpense from "./components/NewExpense/NewExpense";
 
-const expenses = [
+const dummy_expenses = [
   {
     id: 'e1',
     title: 'Toilet Paper',
@@ -27,12 +28,25 @@ const expenses = [
   },
 ];
 
-const addExpenseHandler = (expense) => {
-  console.log("In App.js");
-  console.log(expense);
-}
+
 
 const App = () => {
+  const [expenses, setExpenses] = useState(dummy_expenses);
+
+  const addExpenseHandler = expense => {
+    setExpenses(prevExpenses  => {
+      return [expense, ...prevExpenses]
+    });
+  }
+
+
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+// const result = words.filter(word => word.length > 6);
+
+// console.log(result);
+// // expected output: Array ["exuberant", "destruction", "present"]
+  
   return (
     <div>
       <NewExpense addExpense={addExpenseHandler} />
